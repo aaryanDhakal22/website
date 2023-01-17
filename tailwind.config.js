@@ -8,7 +8,7 @@ module.exports = {
         "bsecondary":'#2b2f34',
         "fprimary":"#ac94f4",
         "fsecondary":'#9e9e9e',
-        "white":"#fcfcfd"
+        "kwhite":"#fcfcfd"
       }
     },
   },
