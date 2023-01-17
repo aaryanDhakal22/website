@@ -2,7 +2,15 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "bprimary": '#373b41',
+        "bsecondary":'#2b2f34',
+        "fprimary":"#ac94f4",
+        "fsecondary":'#9e9e9e',
+        "white":"#fcfcfd"
+      }
+    },
   },
   plugins: [],
 }
