@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -9,6 +9,9 @@ module.exports = {
         "fprimary":"#ac94f4",
         "fsecondary":'#9e9e9e',
         "kwhite":"#fcfcfd"
+      },
+      fontSize: {
+        '2xs':"0.5rem"
       }
     },
   },
