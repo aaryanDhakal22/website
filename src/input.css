@@ -6,3 +6,8 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
 }
+@layer components{
+    .lang-tag{
+        @apply text-xs outline mb-2 text-fprimary inline p-1 rounded-br-md rounded-tl-md 
+    }
+}

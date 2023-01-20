@@ -547,6 +547,19 @@ video {
   }
 }
 
+.lang-tag {
+  margin-bottom: 0.5rem;
+  display: inline;
+  border-bottom-right-radius: 0.375rem;
+  border-top-left-radius: 0.375rem;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(172 148 244 / var(--tw-text-opacity));
+  outline-style: solid;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -633,6 +646,18 @@ video {
   isolation: auto;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .float-right {
   float: right;
 }
@@ -712,6 +737,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-96 {
+  margin-top: 24rem;
 }
 
 .box-border {
@@ -1190,6 +1219,14 @@ video {
   grid-auto-flow: column dense;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1356,6 +1393,10 @@ video {
 
 .justify-items-stretch {
   justify-items: stretch;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1863,6 +1904,10 @@ video {
      object-fit: scale-down;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1891,6 +1936,11 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pt-14 {
@@ -1976,6 +2026,11 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
