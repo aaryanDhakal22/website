@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+  <!-- FONT AWESOME KITS -->
+  <script src="https://kit.fontawesome.com/bf487ca167.js" crossorigin="anonymous"></script>
   <!-- Linking the tailwind production CSS -->
 
   <link href="/dist/output.css" rel="stylesheet">
 
-  <!-- Using Google Fonts -->
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  
+  <!-- Alpine Plugins -->
+  <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  
+  <!-- Alpine Core -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+  <!-- Using Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
   <style> @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap'); </style>
 
@@ -145,6 +153,67 @@
 
 
         </div>
+        <br><br>
+        <div class="bg-bsecondary p-5 rounded-lg">
+          <div class="text-fprimary text-center text-2xl">FAQ</div>
+
+
+          <!-- <div class="text-lg hover:translate-y-32  origin-top duration-500">TEST</div> -->
+
+
+          <div class="flex flex-col mt-5">
+            
+            <div x-data="{expanded : false}" class="mt-2">
+              <div  @click="expanded = !expanded"  class="faq-tab flex justify-between">
+                WHERE ARE YOU FROM
+                <i  class="fa-solid fa-chevron-down "></i>
+              </div>
+              <div class="faq-info-tab " x-show="expanded" x-collapse.duration.500ms @click.outside="expanded = false" >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, nesciunt alias. 
+                Ducimus voluptatem illo dolor cumque tempora. 
+              </div>
+            </div>
+
+            <div x-data="{expanded : false}" class="mt-2">
+              <div  @click="expanded = !expanded"  class="faq-tab flex justify-between">
+                WHERE ARE YOU FROM
+                <i  class="fa-solid fa-chevron-down "></i>
+              </div>
+              <div class="faq-info-tab " x-show="expanded" x-collapse.duration.500ms @click.outside="expanded = false" >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, nesciunt alias. 
+                Ducimus voluptatem illo dolor cumque tempora. 
+              </div>
+            </div>
+
+
+            <div x-data="{expanded : false}" class="mt-2">
+              <div  @click="expanded = !expanded"  class="faq-tab flex justify-between">
+                WHERE ARE YOU FROM
+                <i  class="fa-solid fa-chevron-down "></i>
+              </div>
+              <div class="faq-info-tab " x-show="expanded" x-collapse.duration.500ms @click.outside="expanded = false" >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, nesciunt alias. 
+                Ducimus voluptatem illo dolor cumque tempora. 
+              </div>
+            </div>
+
+
+            <div x-data="{expanded : false}" class="mt-2">
+              <div  @click="expanded = !expanded"  class="faq-tab flex justify-between">
+                WHERE ARE YOU FROM
+                <i  class="fa-solid fa-chevron-down "></i>
+              </div>
+              <div class="faq-info-tab " x-show="expanded" x-collapse.duration.500ms @click.outside="expanded = false" >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, nesciunt alias. 
+                Ducimus voluptatem illo dolor cumque tempora. 
+              </div>
+            </div>
+            
+
+            
+
+          </d>
+        </div>
         
       </div>
 
@@ -153,6 +222,7 @@
     
 
   </div>
+  <div class="mt-96">test</div>
   <div class="mt-96">test</div>
 </body>
 

@@ -10,4 +10,10 @@ body{
     .lang-tag{
         @apply text-xs outline mb-2 text-fprimary inline p-1 rounded-br-md rounded-tl-md 
     }
+    .faq-tab{
+        @apply text-sm bg-bprimary text-kwhite p-3 rounded-tr-md rounded-tl-md 
+    }
+    .faq-info-tab{
+        @apply text-sm bg-bprimary p-3
+    }
 }
