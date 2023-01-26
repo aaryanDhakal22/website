@@ -11,9 +11,12 @@ body{
         @apply text-xs outline mb-2 text-fprimary inline p-1 rounded-br-md rounded-tl-md 
     }
     .faq-tab{
-        @apply text-sm bg-bprimary text-kwhite p-3 rounded-tr-md rounded-tl-md 
+        @apply text-sm bg-bprimary text-kwhite p-3 rounded-tr-md rounded-tl-md
     }
     .faq-info-tab{
-        @apply text-sm bg-bprimary p-3
+        @apply text-sm bg-bprimary p-3 md:text-lg
+    }
+    .hover-shadow{
+        @apply hover:shadow-lg hover:shadow-fprimary hover:scale-105 transition-all duration-300
     }
 }
