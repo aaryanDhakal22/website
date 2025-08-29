@@ -1,314 +1,351 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aaryan Dhakal, Software Developer</title>
+    <meta name="title" content="Aaryan Dhakal, Software Developer" />
+    <meta name="description"
+        content="Aaryan Dhakal's software developer portfolio showcasing full-stack projects, programming skills, and work experience in Golang, Python, TypeScript, and web development." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aaryandhakal.com/" />
+    <meta property="og:title" content="Aaryan Dhakal, Software Developer" />
+    <meta property="og:description"
+        content="Aaryan Dhakal's software developer portfolio showcasing full-stack projects, programming skills, and work experience in Golang, Python, TypeScript, and web development." />
+    <meta property="og:image" content="https://aaryandhakal.com/images/DesktopBanner.svg" />
+
+    <meta property=" twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://aaryandhakal.com/" />
+    <meta property="twitter:title" content="Aaryan Dhakal, Software Developer" />
+    <meta property="twitter:description"
+        content="Aaryan Dhakal's software developer portfolio showcasing full-stack projects, programming skills, and work experience in Golang, Python, TypeScript, and web development." />
+    <meta property="twitter:image" content="https://aaryandhakal.com/images/DesktopBanner.svg" />
 
 
-  <!-- FONT AWESOME KITS -->
-  <script src="https://kit.fontawesome.com/bf487ca167.js" crossorigin="anonymous"></script>
-  <!-- Linking the tailwind production CSS -->
+    <!-- FONT AWESOME KITS -->
+    <script src="https://kit.fontawesome.com/bf487ca167.js" crossorigin="anonymous"></script>
+    <!-- Linking the tailwind production CSS -->
 
-  <link href="/dist/output.css" rel="stylesheet">
-  
-  <!-- Alpine Plugins -->
-  <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  
-  <!-- Alpine Core -->
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="/dist/output.css" rel="stylesheet">
 
-  <!-- Using Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
-  <style> @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap'); </style>
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
-  <title>Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="./images/Logo.png">
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Using Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+    </style>
+
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./images/Logo.png">
 </head>
+
 <body class=" bg-bprimary">
-  <div class="main">
+    <div class="main">
 
 
-<!-- component -->
+        <!-- component -->
 
-  <div class="antialiased bg-gray-100 ">
-  <div class="w-full text-kwhite bg-bprimary ">
-    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-      <div class="flex flex-row items-center justify-between px-4 mt-5">
-        <a href="#" class="focus:outline-none focus:shadow-outline"><img width = "50px" height="40px"  src="./images/Logo.png" alt="website logo"></a>
-        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-          <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
-            <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-            <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </button>
-      </div>
-      <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-        <a class="px-4 py-2 mt-2 text-md sm:hidden bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/pdfs/resume.pdf" download><i class="fa-regular fa-file text-fprimary"></i> &nbsp; Résumé</a>
-        <a class="px-4 py-2 mt-2 text-md  hidden sm:block bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/pdfs/resume.pdf"><i class="fa-regular fa-file text-fprimary"></i> &nbsp; Résumé</a>
-        <a class="px-4 py-2 mt-2 text-md  bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="https://www.github.com/aaryanDhakal22"><i class="fa-brands fa-github text-fprimary"></i> &nbsp; Github</a>
-        <a class="px-4 py-2 mt-2 text-md  bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="https://www.linkedin.com/in/aaryandhakal22/"><i class="fa-brands fa-linkedin text-fprimary"></i> &nbsp; LinkedIn</a>
-        <a class="px-4 py-2 mt-2 text-md  bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="mailto:aaryan.dhakal22@gmail.com"><i class="fa-solid fa-at text-fprimary"></i> &nbsp; Contact</a>
-      
-      </nav>
+        <div class="antialiased bg-gray-100 ">
+            <div class="w-full text-kwhite bg-bprimary ">
+                <div x-data="{ open: false }"
+                    class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                    <div class="flex flex-row items-center justify-between px-4 mt-5">
+                        <a href="#" class="focus:outline-none focus:shadow-outline"><img width="50px" height="40px"
+                                src="./images/Logo.png" alt="website logo"></a>
+                        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+                            @click="open = !open">
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
+                                <path x-show="!open" fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                    clip-rule="evenodd"></path>
+                                <path x-show="open" fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <nav :class="{'flex': open, 'hidden': !open}"
+                        class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                        <a class="px-4 py-2 mt-2 text-md sm:hidden bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="/pdfs/resume.pdf" download><i class="fa-regular fa-file text-fprimary"></i> &nbsp;
+                            Résumé</a>
+                        <a class="px-4 py-2 mt-2 text-md  hidden sm:block bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="/pdfs/resume.pdf"><i class="fa-regular fa-file text-fprimary"></i> &nbsp; Résumé</a>
+                        <a class="px-4 py-2 mt-2 text-md  bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="https://www.github.com/aaryanDhakal22"><i
+                                class="fa-brands fa-github text-fprimary"></i> &nbsp; Github</a>
+                        <a class="px-4 py-2 mt-2 text-md  bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="https://www.linkedin.com/in/aaryandhakal22/"><i
+                                class="fa-brands fa-linkedin text-fprimary"></i> &nbsp; LinkedIn</a>
+                        <a class="px-4 py-2 mt-2 text-md  bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="mailto:aaryan.dhakal22@gmail.com"><i class="fa-solid fa-at text-fprimary"></i> &nbsp;
+                            Contact</a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <img class="ml-auto sm:hidden" src="./images/Mobile banner.svg" alt="Mobile Banner">
+            <span class="sm:px-10 lg:px-0 hidden sm:block">
+                <img class="mx-auto " src="./images/DesktopBanner.svg" alt="Desktop Banner">
+            </span>
+            <br>
+            <div class="px-4 lg:px-80 mt-1 md:mt-10 lg:mt-20 ">
+                <div class="bg-bsecondary rounded-xl px-2 ">
+                    <div class="pt-14 text-3xl  text-center sm:text-4xl"><span class="text-fprimary">LANGUAGES </span>I
+                        SPEAK</div>
+
+                    <!-- Desktop Version -->
+                    <div class="hidden sm:block">
+
+                        <div class="flex justify-around mt-10">
+                            <div>
+                                <img class="lg:w-48 w-32 mx-auto " src="./images/pythonlogo.svg" alt="python">
+                                <div class="text-xl mt-5 text-center">To automate with <span
+                                        class="text-fprimary">dynamic <br> typing</span></div>
+                            </div>
+                            <div>
+                                <img class="lg:w-44 w-28 mx-auto" src="./images/cpplogo.svg" alt="cpp">
+                                <div class="text-xl mt-5 text-center">To build <span class="text-fprimary">memory
+                                        efficient</span> <br> speedy program</div>
+                            </div>
+                            <div>
+                                <img class="lg:w-48 w-32 mx-auto" src="./images/tslogo.svg" alt="ts">
+                                <div class="text-xl mt-5 text-center">To rule the internet <br> but a little <span
+                                        class="text-fprimary">safer</span></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row px-12 lg:px-40 mt-10 lg:mt-24 justify-between">
+                            <div class="text-xl lg:text-3xl mt-10">AND I ALSO <br>BRING <br> <span
+                                    class="text-fprimary">MORE TO <br>THE TABLE</span></div>
+                            <img class="h-40 lg:h-52" src="./images/Desktop-table.svg" alt="">
+                        </div>
+
+                    </div>
+
+                    <!-- Mobile Version -->
+                    <div class="sm:hidden">
+
+                        <img class="mt-10 mx-auto sm:hidden " src="images/LanguageRank.svg" alt="language rankings">
+                        <div class="text-center mt-10 mb-9 text-xl ">AND I ALSO BRING <span class="text-fprimary">MORE
+                                TO THE TABLE</span></div>
+                        <img class="mx-auto" src="../images/AppTable.svg" alt="table with apps ">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-3xl mt-12 sm:text-4xl">
+                WORK <span class="text-fprimary">EXPERIENCE</span>
+            </div>
+            <div class="grid sm:grid-cols-2 grid-cols-1 mt-8 lg:px-80 gap-3">
+                <div class="px-4 col-span-2 sm:col-span-1 ">
+                    <div class="bg-bsecondary rounded-xl px-8 lg:px-16 py-5">
+                        <div class="text-center text-2xl sm:text-3xl  text-kwhite " id="title"> STUDENT PROGRAMMER
+                        </div>
+                        <div class="text-fsecondary text-center sm:text-sm text-xs">(DEC 2022 - PRESENT)</div>
+                        <ul class="mt-3 text-sm list-disc  text-justify">
+                            <li class="">Designing, implementing and supporting full stack web applications in Java &
+                                Typescript </li><br>
+                            <li class="">Managing database and writing PL/SQL code to serve it to other pieces of
+                                software and to view reports</li>
+                        </ul>
+                        <div class="mt-4 flex justify-between">
+                            <span class="text-fsecondary text-xs mt-2">@ Youngstown State University</span>
+                            <img class="inline" src="images/ysulogo.png" width="50px" alt="ysulogo">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 col-span-2 sm:col-span-1">
+                    <div class="bg-bsecondary rounded-xl px-8 lg:px-16 py-5">
+                        <div class="text-center text-2xl sm:text-3xl  text-kwhite " id="title"> STUDENT TECHNICIAN
+                        </div>
+                        <div class="text-fsecondary text-center sm:text-sm text-xs">(OCT 2022 - DEC 2022)</div>
+                        <ul class="mt-3 text-sm list-disc  text-justify">
+                            <li class="">Built and documented an internal tool that increased the efficiency of tasks
+                                with the help of automation</li><br>
+                            <li class="">Assisted with troubleshooting and software support for clients around the
+                                campus </li> <br>
+                            <!-- <li class="">Prepared and deployed several PCs and AV systems around campus </li> -->
+                        </ul>
+                        <div class="mt-4 flex justify-between">
+                            <span class="text-fsecondary text-xs mt-2">@ Youngstown State University</span>
+                            <img class="inline" src="images/ysulogo.png" width="50px" alt="ysulogo">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4  col-span-2 sm:col-span-1 ">
+                    <div class="bg-bsecondary rounded-xl px-8 lg:px-16 py-5">
+                        <div class="text-center text-2xl sm:text-3xl  text-kwhite " id="title"> SOFTWARE DEVELOPER
+                        </div>
+                        <div class="text-fsecondary text-center sm:text-sm text-xs">(DEC 2021 - MAY 2022)</div>
+                        <ul class="mt-3 text-sm list-disc  text-justify">
+                            <li class="">Created an accounting software that tracked transactions, student profiles and
+                                generated trial balances and balance sheets on demand </li><br>
+                            <li class="">The software kept track of assets, liabilities and inventory while running
+                                blazing fast searches and database querying with caching </li>
+                        </ul>
+                        <div class="mt-4 flex justify-between">
+                            <span class="text-fsecondary text-xs mt-2">@ Anmol Special Education Center</span>
+                            <img class="inline" src="images/anmollogo.png" width="60px" alt="ysulogo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center text-2xl sm:text-4xl mt-12">
+                MY <span class="text-fprimary">PROJECT GALLERY</span>
+
+            </div>
+            <div class="text-center text-xs sm:text-sm text-fsecondary">(CLICK FOR GITHUB)</div>
+            <div class="mt-4 px-5 lg:px-80">
+                <div class="grid grid-cols-2 grid-rows-3 gap-3">
+
+
+                    <a href="https://github.com/aaryanDhakal22/anmol-accounting"
+                        class="bg-bsecondary p-5 row-span-2 col-span-1 rounded-xl hover-shadow "
+                        onclick='{()=>{window.location="https://github.com/aaryanDhakal22/anmol-accounting"}}'>
+                        <img class="w-24 sm:w-44" src="images/mitosysLogo.png" alt="">
+                        <div class="text-kwhite text-xl mt-3 sm:text-3xl">MITOSYS</div>
+                        <div class="mt-2">
+
+                            <div class="lang-tag">Python</div> &nbsp;
+                            <div class="lang-tag">React</div>
+                        </div>
+                        <div class=" mt-3 sm:mt-5 text-fsecondary sm:text-2xl">A suite of programs used for maintaining
+                            academic and financial records of teachers and students. <br> <br> It also generates income
+                            sheet, trail balances while being blazing fast with queries</div>
+                    </a>
+
+                    <a href="https://github.com/aaryanDhakal22/Celper"
+                        class="bg-bsecondary p-5  col-span-1 rounded-xl hover-shadow ">
+                        <img class="w-16" src="images/celper.png" alt="printer">
+                        <div class="text-kwhite mt-1 sm:text-2xl">CELPER</div>
+                        <div class="mt-2">
+                            <div class="lang-tag">Django</div> &nbsp;
+                            <div class="lang-tag">GmailAPI</div>
+                        </div>
+                        <div class="text-sm mt-3 text-fsecondary sm:text-xl">Automated ticket creation based on email
+                            alerts received from the printer</div>
+                    </a>
+
+                    <a href="https://github.com/aaryanDhakal22/Schedadle"
+                        class="bg-bsecondary p-5  col-span-1 rounded-xl hover-shadow ">
+                        <img class="w-16" src="images/schedadle.png" alt="mars">
+                        <div class="text-kwhite mt-2 sm:text-2xl">SCHEDADLE</div>
+                        <div class="mt-2">
+                            <div class="lang-tag">Python</div>
+                        </div>
+                        <div class="text-sm mt-3 text-fsecondary sm:text-xl">Program that to finds the best possible
+                            class schedule</div>
+                    </a>
+
+
+
+                    <a href="https://github.com/aaryanDhakal22/py2anki"
+                        class="bg-bsecondary p-5 col-span-2 rounded-xl text-center hover-shadow ">
+                        <img class="w-16 mx-auto" src="images/py2anki.png" alt="">
+                        <span class="text-kwhite mt-10 sm:text-2xl">PY2ANKI</span><br>
+                        <div class="mt-2">
+                            <div class="lang-tag">Python</div> &nbsp;
+                            <div class="lang-tag">Pygments</div>
+                        </div>
+                        <div class="text-lg mt-3 text-fsecondary sm:text-xl">A python script that turns code into anki
+                            flashcard to make learning Algorithm and flowchart more easier</div>
+                    </a>
+
+
+
+                </div>
+                <br><br>
+                <div class="bg-bsecondary p-5 rounded-lg">
+                    <div class="text-fprimary text-center text-2xl sm:text-4xl">FAQ</div>
+
+
+                    <!-- <div class="text-lg hover:translate-y-32  origin-top duration-500">TEST</div> -->
+
+
+                    <div class="flex flex-col mt-5 ">
+
+                        <div x-data="{expanded : false}" class="mt-2 sm:mt-4">
+                            <div @click="expanded = !expanded" class="faq-tab flex justify-between sm:text-xl">
+                                WHERE ARE YOU FROM ?
+                                <i class="fa-solid fa-chevron-down "></i>
+                            </div>
+                            <div class="faq-info-tab " x-show="expanded" @click.outside="expanded = false">
+                                I am a citizen of Nepal staying in Youngstown, OH for my higher studies.
+                            </div>
+                        </div>
+
+                        <div x-data="{expanded : false}" class="mt-2 sm:mt-4">
+                            <div @click="expanded = !expanded" class="faq-tab flex justify-between sm:text-xl">
+                                WHY DO YOU LIFE COMPUTER SCIENCE ?
+                                <i class="fa-solid fa-chevron-down "></i>
+                            </div>
+                            <div class="faq-info-tab " x-show="expanded" @click.outside="expanded = false">
+                                I just love anything to do with creating stuff. Programming has allowed me to make
+                                things out of seemingly nothing and that is why
+                                I owe a lot of my smiles and curiosity to it.
+                            </div>
+                        </div>
+
+
+                        <div x-data="{expanded : false}" class="mt-2 sm:mt-4">
+                            <div @click="expanded = !expanded" class="faq-tab flex justify-between sm:text-xl">
+                                DO YOU ENJOY WORKING IN A TEAM?
+                                <i class="fa-solid fa-chevron-down "></i>
+                            </div>
+                            <div class="faq-info-tab " x-show="expanded" @click.outside="expanded = false">
+                                I really love working in a team. That is also a reason why I love taking parts in
+                                Hackathons and working with people who know different tech stacks because
+                                it gives me an oppurtunity to learn more and make myself adapt to their needs.
+                            </div>
+                        </div>
+
+
+                        <div x-data="{expanded : false}" class="mt-2 sm:mt-4">
+                            <div @click="expanded = !expanded" class="faq-tab flex justify-between sm:text-xl">
+                                DO YOU WANT TO WORK ON A PROJECT WITH ME ?
+                                <i class="fa-solid fa-chevron-down "></i>
+                            </div>
+                            <div class="faq-info-tab " x-show="expanded" @click.outside="expanded = false">
+                                Absolutely, I love working on stuff that makes anyone's life even a little bit easier. I
+                                do have limited time from work and school but I am never not working on
+                                some project.
+                            </div>
+                        </div>
+
+
+
+
+                        </d>
+                    </div>
+
+                </div>
+
+
+        </main>
+
     </div>
-  </div>
-</div>
+    <footer>
+        <div class="bg-bsecondary mt-5 p-5 text-center ">
+            <span class="text-fsecondary sm:text-xl">-- &nbsp;&nbsp; END &nbsp;&nbsp; --</span>
 
-
-
-
-
-    <!-- <header>
-       <div class=" flex px-10 ">
-      <img class="mt-5"width = "60px" height="54px" src="images/Logo.png" alt="websiteLogo"> -->
-
-      <!-- test code -->
-
-
-
-
-      <!-- test code -->
-
-
-
-
-
-      <!-- <div class="mt-3 relative py-3 sm:max-w-xl ml-auto">
-        <nav x-data="{ open: false }">
-            <button class="text-gray-500 w-10 h-10 relative focus:outline-none " @click="open = !open">
-                <span class="sr-only">Open main menu</span>
-                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
-                    <span aria-hidden="true" class="block absolute h-1 w-8 bg-kwhite transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
-                    <span aria-hidden="true" class="block absolute  h-1 w-8 mt-0.5 bg-kwhite   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
-                    <span aria-hidden="true" class="block absolute  h-1 w-8  bg-kwhite transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-2.5': !open}"></span>
-                </div>
-            </button>
-        </nav>
-      </div> -->
-    <!-- </div>
-    </header> -->
-   <main>
-      <img class ="ml-auto sm:hidden"src="./images/Mobile banner.svg" alt="Mobile Banner">
-      <span class ="sm:px-10 lg:px-0 hidden sm:block">
-        <img class="mx-auto " src="./images/DesktopBanner.svg" alt="Desktop Banner">
-      </span>
-      <br>
-      <div class="px-4 lg:px-80 mt-1 md:mt-10 lg:mt-20 ">
-          <div class="bg-bsecondary rounded-xl px-2 ">
-            <div class="pt-14 text-3xl  text-center sm:text-4xl"><span class="text-fprimary">LANGUAGES </span>I SPEAK</div>
-            
-            <!-- Desktop Version -->
-            <div class="hidden sm:block">
-
-              <div class="flex justify-around mt-10">
-                <div>
-                  <img class="lg:w-48 w-32 mx-auto " src="./images/pythonlogo.svg" alt="python">
-                  <div class="text-xl mt-5 text-center">To automate with <span class="text-fprimary">dynamic <br> typing</span></div>
-                </div>
-                <div>
-                  <img class="lg:w-44 w-28 mx-auto" src="./images/cpplogo.svg" alt="cpp">
-                  <div class="text-xl mt-5 text-center">To build <span class="text-fprimary">memory efficient</span> <br> speedy program</div>
-                </div>
-                <div>
-                  <img class="lg:w-48 w-32 mx-auto" src="./images/tslogo.svg" alt="ts">
-                  <div class="text-xl mt-5 text-center">To rule the internet <br> but a little <span class="text-fprimary">safer</span></div>
-                </div>
-              </div>
-
-              <div class="flex flex-row px-12 lg:px-40 mt-10 lg:mt-24 justify-between">
-                <div class="text-xl lg:text-3xl mt-10">AND I ALSO <br>BRING  <br> <span class="text-fprimary">MORE TO <br>THE TABLE</span></div>
-                <img class="h-40 lg:h-52" src="./images/Desktop-table.svg" alt="">
-              </div>
-
-            </div>
-
-            <!-- Mobile Version -->
-            <div class="sm:hidden">
-
-              <img class="mt-10 mx-auto sm:hidden " src="images/LanguageRank.svg" alt="language rankings">
-              <div class="text-center mt-10 mb-9 text-xl ">AND I ALSO BRING <span class="text-fprimary">MORE TO THE TABLE</span></div>
-              <img class ="mx-auto"src="../images/AppTable.svg" alt="table with apps ">
-            </div>
-          </div>
-      </div>
-      <div class="text-center text-3xl mt-12 sm:text-4xl">
-        WORK <span class="text-fprimary">EXPERIENCE</span>
-      </div>
-      <div class="grid sm:grid-cols-2 grid-cols-1 mt-8 lg:px-80 gap-3">
-        <div class="px-4 col-span-2 sm:col-span-1 ">
-          <div class="bg-bsecondary rounded-xl px-8 lg:px-16 py-5">
-              <div class="text-center text-2xl sm:text-3xl  text-kwhite " id="title"> STUDENT PROGRAMMER </div>
-              <div class="text-fsecondary text-center sm:text-sm text-xs">(DEC 2022 - PRESENT)</div>
-              <ul class="mt-3 text-sm list-disc  text-justify" >
-                <li class="">Designing, implementing and supporting full stack web applications in Java & Typescript </li><br>
-                <li class="">Managing database and writing PL/SQL code to serve it to other pieces of software and to view reports</li>
-              </ul>
-              <div class="mt-4 flex justify-between">
-                <span class="text-fsecondary text-xs mt-2">@ Youngstown State University</span>
-                <img class="inline" src="images/ysulogo.png" width="50px" alt="ysulogo">
-              </div>
-          </div>
-        </div>
-        <div class="px-4 col-span-2 sm:col-span-1">
-          <div class="bg-bsecondary rounded-xl px-8 lg:px-16 py-5">
-              <div class="text-center text-2xl sm:text-3xl  text-kwhite " id="title"> STUDENT TECHNICIAN </div>
-              <div class="text-fsecondary text-center sm:text-sm text-xs">(OCT 2022 - DEC 2022)</div>
-              <ul class="mt-3 text-sm list-disc  text-justify" >
-                <li class="">Built and documented an internal tool that increased the efficiency of tasks with the help of automation</li><br>
-                <li class="">Assisted with troubleshooting and software support for clients around the campus </li> <br>
-                <!-- <li class="">Prepared and deployed several PCs and AV systems around campus </li> -->
-              </ul>
-              <div class="mt-4 flex justify-between">
-                <span class="text-fsecondary text-xs mt-2">@ Youngstown State University</span>
-                <img class="inline" src="images/ysulogo.png" width="50px" alt="ysulogo">
-              </div>
-          </div>
-        </div>
-        <div class="px-4  col-span-2 sm:col-span-1 ">
-          <div class="bg-bsecondary rounded-xl px-8 lg:px-16 py-5">
-              <div class="text-center text-2xl sm:text-3xl  text-kwhite " id="title"> SOFTWARE DEVELOPER </div>
-              <div class="text-fsecondary text-center sm:text-sm text-xs">(DEC 2021 - MAY 2022)</div>
-              <ul class="mt-3 text-sm list-disc  text-justify" >
-                <li class="">Created an accounting software that tracked transactions, student profiles and generated trial balances and balance sheets on demand </li><br>
-                <li class="">The software kept track of assets, liabilities and inventory while running blazing fast searches and database querying with caching </li>
-              </ul>
-              <div class="mt-4 flex justify-between">
-                <span class="text-fsecondary text-xs mt-2">@ Anmol Special Education Center</span>
-                <img class="inline" src="images/anmollogo.png" width="60px" alt="ysulogo">
-              </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="text-center text-2xl sm:text-4xl mt-12">
-        MY <span class="text-fprimary">PROJECT GALLERY</span>
-        
-      </div>
-      <div class="text-center text-xs sm:text-sm text-fsecondary">(CLICK FOR GITHUB)</div>
-      <div class="mt-4 px-5 lg:px-80">
-        <div class="grid grid-cols-2 grid-rows-3 gap-3">
-
-          
-          <a href ="https://github.com/aaryanDhakal22/anmol-accounting"class="bg-bsecondary p-5 row-span-2 col-span-1 rounded-xl hover-shadow " onclick='{()=>{window.location="https://github.com/aaryanDhakal22/anmol-accounting"}}'>
-            <img  class ="w-24 sm:w-44"src="images/mitosysLogo.png" alt="">
-            <div class="text-kwhite text-xl mt-3 sm:text-3xl">MITOSYS</div>
-            <div class="mt-2">
-
-              <div class="lang-tag">Python</div> &nbsp;
-              <div class="lang-tag">React</div>
-            </div>
-            <div class=" mt-3 sm:mt-5 text-fsecondary sm:text-2xl">A suite of programs used for maintaining academic and financial records of teachers and students. <br> <br> It also generates income sheet, trail balances while being blazing fast with queries</div>
-          </a>
-
-          <a href="https://github.com/aaryanDhakal22/Celper" class="bg-bsecondary p-5  col-span-1 rounded-xl hover-shadow ">
-            <img  class ="w-16"src="images/celper.png" alt="printer">
-            <div class="text-kwhite mt-1 sm:text-2xl">CELPER</div>
-            <div class="mt-2">
-              <div class="lang-tag">Django</div> &nbsp;
-              <div class="lang-tag">GmailAPI</div>
-            </div>
-            <div class="text-sm mt-3 text-fsecondary sm:text-xl">Automated ticket creation based on email alerts received from the printer</div>
-          </a>
-
-          <a href="https://github.com/aaryanDhakal22/Schedadle" class="bg-bsecondary p-5  col-span-1 rounded-xl hover-shadow ">
-            <img  class ="w-16" src="images/schedadle.png" alt="mars">
-            <div class="text-kwhite mt-2 sm:text-2xl">SCHEDADLE</div>
-            <div class="mt-2">
-              <div class="lang-tag">Python</div> 
-            </div>
-            <div class="text-sm mt-3 text-fsecondary sm:text-xl">Program that to finds the best possible class schedule</div>
-          </a>
-
-
-
-          <a href="https://github.com/aaryanDhakal22/py2anki" class="bg-bsecondary p-5 col-span-2 rounded-xl text-center hover-shadow ">
-            <img  class ="w-16 mx-auto" src="images/py2anki.png" alt="">
-            <span class="text-kwhite mt-10 sm:text-2xl">PY2ANKI</span><br>
-            <div class="mt-2">
-              <div class="lang-tag">Python</div> &nbsp;
-              <div class="lang-tag">Pygments</div>
-            </div>
-            <div class="text-lg mt-3 text-fsecondary sm:text-xl">A python script that turns code into anki flashcard to make learning Algorithm and flowchart more easier</div>
-          </a>
-
-
+            <img class="mt-2 mx-auto" width="40px" height="40px" src="images/Logo.png" alt="websiteLogo">
 
         </div>
-        <br><br>
-        <div class="bg-bsecondary p-5 rounded-lg">
-          <div class="text-fprimary text-center text-2xl sm:text-4xl">FAQ</div>
-
-
-          <!-- <div class="text-lg hover:translate-y-32  origin-top duration-500">TEST</div> -->
-
-
-          <div class="flex flex-col mt-5 ">
-            
-            <div x-data="{expanded : false}" class="mt-2 sm:mt-4">
-              <div  @click="expanded = !expanded"  class="faq-tab flex justify-between sm:text-xl">
-                WHERE ARE YOU FROM ?
-                <i  class="fa-solid fa-chevron-down "></i>
-              </div>
-              <div class="faq-info-tab " x-show="expanded"  @click.outside="expanded = false" >
-                I am a citizen of Nepal staying in Youngstown, OH for my higher studies.
-              </div>
-            </div>
-
-            <div x-data="{expanded : false}" class="mt-2 sm:mt-4">
-              <div  @click="expanded = !expanded"  class="faq-tab flex justify-between sm:text-xl">
-                WHY DO YOU LIFE COMPUTER SCIENCE ? 
-                <i  class="fa-solid fa-chevron-down "></i>
-              </div>
-              <div class="faq-info-tab " x-show="expanded"  @click.outside="expanded = false" >
-                I just love anything to do with creating stuff. Programming has allowed me to make things out of seemingly nothing and that is why 
-                I owe a lot of my smiles and curiosity to it.
-              </div>
-            </div>
-
-
-            <div x-data="{expanded : false}" class="mt-2 sm:mt-4">
-              <div  @click="expanded = !expanded"  class="faq-tab flex justify-between sm:text-xl">
-                DO YOU ENJOY WORKING IN A TEAM?
-                <i  class="fa-solid fa-chevron-down "></i>
-              </div>
-              <div class="faq-info-tab " x-show="expanded" @click.outside="expanded = false" >
-                I really love working in a team. That is also a reason why I love taking parts in Hackathons and working with people who know different tech stacks because
-                it gives me an oppurtunity to learn more and make myself adapt to their needs.
-              </div>
-            </div>
-
-
-            <div x-data="{expanded : false}" class="mt-2 sm:mt-4">
-              <div  @click="expanded = !expanded"  class="faq-tab flex justify-between sm:text-xl">
-                DO YOU WANT TO WORK ON A PROJECT WITH ME ?
-                <i  class="fa-solid fa-chevron-down "></i>
-              </div>
-              <div class="faq-info-tab " x-show="expanded" @click.outside="expanded = false" >
-                Absolutely, I love working on stuff that makes anyone's life even a little bit easier. I do have limited time from work and school but I am never not working on
-                some project.
-              </div>
-            </div>
-            
-
-            
-
-          </d>
-        </div>
-        
-      </div>
-
-      
-   </main>
-
-  </div>
-  <footer>
-    <div class="bg-bsecondary mt-5 p-5 text-center ">
-     <span class="text-fsecondary sm:text-xl" >--  &nbsp;&nbsp; END &nbsp;&nbsp;    --</span>
-     
-     <img class="mt-2 mx-auto"width = "40px" height="40px" src="images/Logo.png" alt="websiteLogo">
-
-    </div>
-  </footer>
+    </footer>
 </body>
 
 </html>
