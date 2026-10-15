@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
-<url>
-  <loc>https://aaryandhakal.com/</loc>
-  <lastmod>2026-10-14T00:00:00+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://aaryandhakal.com/pdfs/resume.pdf</loc>
-  <lastmod>2026-10-14T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://aaryandhakal.com/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <image:image>
+      <image:loc>https://aaryandhakal.com/images/aaryan-dhakal-1000.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://aaryandhakal.com/pdfs/resume.pdf</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
 </urlset>
